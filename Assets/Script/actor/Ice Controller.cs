@@ -63,7 +63,7 @@ public class IceController : MonoBehaviour
 
         if (Sport > 0.05f)
         {
-            transform.Translate(Vector3.forward * MoveSpeed * Sport * Time.deltaTime);
+            transform.Translate(Vector3.forward * MoveSpeed * Sport * Time.deltaTime);//（现在的方向走（原始速度*速度的倍率*时间））
         }
     }
 
