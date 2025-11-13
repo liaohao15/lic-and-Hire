@@ -46,6 +46,8 @@ public class IceController : MonoBehaviour
             isJumping = false;
         }
 
+        Attack();//攻击
+
     }
 
     public void Movement()
@@ -53,7 +55,7 @@ public class IceController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             Sport = Mathf.Min(Sport + 0.05f, 1f);
-            print("现在速度为:" + Sport * MoveSpeed);
+         
         }
         else
         {
@@ -100,6 +102,13 @@ public class IceController : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        if (Input.GetKey(KeyCode.J))
+        {
+            anim.SetTrigger("attack");
+        }
+    }
 
 
 }
